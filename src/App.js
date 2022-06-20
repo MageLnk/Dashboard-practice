@@ -22,11 +22,14 @@ import {
   ColorMapping,
   Editor,
 } from "./pages";
-//Styles
+// Styles
 import "./App.css";
-//
+// Context
+import { useStateContext } from "./contexts/ContextProvider";
+// Main
+
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
