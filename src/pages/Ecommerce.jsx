@@ -6,11 +6,7 @@ import { Stacked, Pie, Button, SparkLine } from "../components";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 // Dummy data
-import {
-  earningData,
-  SparklineAreaData,
-  ecomPieChartData,
-} from "../data/dummy";
+import { earningData, SparklineAreaData, ecomPieChartData } from "../data/dummy";
 // App
 
 const Ecommerce = () => {
@@ -25,13 +21,7 @@ const Ecommerce = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Button
-              size="md"
-              text="Download"
-              color="white"
-              bgColor="blue"
-              borderRadius="10px"
-            />
+            <Button size="md" text="Download" color="white" bgColor="blue" borderRadius="10px" />
           </div>
         </div>
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
@@ -49,9 +39,7 @@ const Ecommerce = () => {
               </button>
               <p className="mt-3">
                 <span className="text-lg font-semibold">{item.amount}</span>
-                <span className={`text.sm text-${item.pcColor} ml-2`}>
-                  {item.percentage}
-                </span>
+                <span className={`text.sm text-${item.pcColor} ml-2`}>{item.percentage}</span>
               </p>
               <p className="text-sm text-gray-400 mt-1">{item.title}</p>
             </div>
@@ -96,13 +84,13 @@ const Ecommerce = () => {
               </div>
               <div className="mt-5">
                 <SparkLine
-                  id="line-sparkline"
-                  data={SparklineAreaData}
-                  type="Line"
-                  color="blue"
-                  width="250px"
-                  height="80px"
                   currentColor="blue"
+                  id="line-sparkline"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color="blue"
                 />
               </div>
             </div>
